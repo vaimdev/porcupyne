@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM python:3.11-slim
 
 COPY ./src /src
 COPY ./entrypoint.sh /entrypoint.sh
@@ -9,6 +9,7 @@ RUN apt-get update && \
     build-essential \
     python3-dev \
     python3-setuptools \
+    libgl1-mesa-glx \
     tesseract-ocr \
     make \
     gcc \
